@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" href="https://gbr01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fcdnjs.cloudflare.com%2Fajax%2Flibs%2Fleaflet%2F1.7.1%2Fleaflet.css&data=05%7C02%7CPaul.Frankham972%40mod.gov.uk%7C8a00b9cf6b2b46775f9b08dcd2a0d4ce%7Cbe7760ed5953484bae95d0a16dfa09e5%7C0%7C0%7C638616835423118801%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&sdata=4REAhNUVtwW7WoYYV5VeFGy7FVo%2FcNpAsmDEOLjwmN4%3D&reserved=0" />
+    <script src="https://gbr01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fcdnjs.cloudflare.com%2Fajax%2Flibs%2Fleaflet%2F1.7.1%2Fleaflet.js&data=05%7C02%7CPaul.Frankham972%40mod.gov.uk%7C8a00b9cf6b2b46775f9b08dcd2a0d4ce%7Cbe7760ed5953484bae95d0a16dfa09e5%7C0%7C0%7C638616835423127069%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&sdata=gjvynVHUZ9%2BgELPHU27H9HBsH6VoX1%2Fi2lc7BdHaVwI%3D&reserved=0"></script>
+    <style>
+      #map {position: absolute; top: 0; right: 0; bottom: 0; left: 0;}
+    </style>
+  </head>
+  <body>
+    <div id="map">
+      <a href="https://gbr01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.maptiler.com%2F&data=05%7C02%7CPaul.Frankham972%40mod.gov.uk%7C8a00b9cf6b2b46775f9b08dcd2a0d4ce%7Cbe7760ed5953484bae95d0a16dfa09e5%7C0%7C0%7C638616835423132254%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&sdata=OjcHlNbnbCLRh%2B%2FhWdBkO9Aa9i2yTJ7xx7A3syMidlw%3D&reserved=0" style="position:absolute;left:10px;bottom:10px;z-index:999;"><img src="https://gbr01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fapi.maptiler.com%2Fresources%2Flogo.svg&data=05%7C02%7CPaul.Frankham972%40mod.gov.uk%7C8a00b9cf6b2b46775f9b08dcd2a0d4ce%7Cbe7760ed5953484bae95d0a16dfa09e5%7C0%7C0%7C638616835423136274%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&sdata=ftMUpalViZzFDjWPmvzJTyiTiw%2FjYCF8LZcvrkB0S%2FA%3D&reserved=0" alt="MapTiler logo"></a>
+    </div>
+    <p><a href="https://gbr01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.maptiler.com%2Fcopyright%2F&data=05%7C02%7CPaul.Frankham972%40mod.gov.uk%7C8a00b9cf6b2b46775f9b08dcd2a0d4ce%7Cbe7760ed5953484bae95d0a16dfa09e5%7C0%7C0%7C638616835423140255%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&sdata=PWDLkAaR4qDwt6qYHEXyoui6OSznUHdVH28jSORWiJY%3D&reserved=0" target="_blank">&copy; MapTiler</a> <a href="https://gbr01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.openstreetmap.org%2Fcopyright&data=05%7C02%7CPaul.Frankham972%40mod.gov.uk%7C8a00b9cf6b2b46775f9b08dcd2a0d4ce%7Cbe7760ed5953484bae95d0a16dfa09e5%7C0%7C0%7C638616835423144142%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&sdata=q0XkPzvT8P9pKydPK3L%2FY%2BQZ5e0PSNzbitd5UAVgTco%3D&reserved=0" target="_blank">&copy; OpenStreetMap contributors</a></p>
+    <script>
+      var map = L.map('map').setView([0, 0], 1);
+      L.tileLayer('https://gbr01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fapi.maptiler.com%2Fmaps%2Fstreets%2F&data=05%7C02%7CPaul.Frankham972%40mod.gov.uk%7C8a00b9cf6b2b46775f9b08dcd2a0d4ce%7Cbe7760ed5953484bae95d0a16dfa09e5%7C0%7C0%7C638616835423148073%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&sdata=obFuQivFi%2B%2FsltuDa3OAThaA4KfgsyGbc7uOLDY0TJs%3D&reserved=0{z}/{x}/{y}.png?key=YOUR_MAPTILER_API_KEY_HERE',{
+        tileSize: 512,
+        zoomOffset: -1,
+        minZoom: 1,
+        attribution: "\u003ca href=\"https://gbr01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.maptiler.com%2Fcopyright%2F%2F&data=05%7C02%7CPaul.Frankham972%40mod.gov.uk%7C8a00b9cf6b2b46775f9b08dcd2a0d4ce%7Cbe7760ed5953484bae95d0a16dfa09e5%7C0%7C0%7C638616835423151917%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&sdata=dIRUV4YgjoMlSDh2GOY%2BkF7yZGSybUNd7V%2FILnQd7TU%3D&reserved=0" target=\"_blank\"\u003e\u0026copy; MapTiler\u003c/a\u003e \u003ca href=\"https://gbr01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.openstreetmap.org%2Fcopyright%2F&data=05%7C02%7CPaul.Frankham972%40mod.gov.uk%7C8a00b9cf6b2b46775f9b08dcd2a0d4ce%7Cbe7760ed5953484bae95d0a16dfa09e5%7C0%7C0%7C638616835423155986%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C&sdata=p7Wf05OujpGIs4o%2Bazty5%2FuOZ6k1DqJTZU30RdiJsh4%3D&reserved=0" target=\"_blank\"\u003e\u0026copy; OpenStreetMap contributors\u003c/a\u003e",
+        crossOrigin: true
+      }).addTo(map);
+    </script>
+  </body>
+</html>
